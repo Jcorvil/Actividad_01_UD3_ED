@@ -12,7 +12,7 @@ import java.io.IOException;
 
 /**
  *
- * @author ana
+ * @author Jorge
  */
 public class Actividad_01_UD3_ED 
 {
@@ -21,12 +21,21 @@ public class Actividad_01_UD3_ED
     private static FileInputStream entradaStream = null;
     private static BufferedInputStream entradaIntermedio = null;
 
+    /**
+     *
+     * @throws FileNotFoundException Es lo que devuelve "inicializarArchivos"
+     */
     public static void inicializarArchivos() throws FileNotFoundException
     {
         entradaStream = new FileInputStream(nombreArchivo);
         entradaIntermedio = new BufferedInputStream(entradaStream);
     }
     
+    /**
+     *
+     * @return
+     * @throws IOException Es lo que devuelve "mostrarTextoarchivo"
+     */
     public static int mostrarTextoArchivo() throws IOException
     {
         int total = 0;
